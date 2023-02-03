@@ -17,7 +17,7 @@ node {
 
     stage('Push') {
     docker.withRegistry('https://index.docker.io/v1/' , 'hub_docker_id') {
-         sh 'docker-compose logs'
+         sh 'docker-compose'
        echo "test"
       }
     }

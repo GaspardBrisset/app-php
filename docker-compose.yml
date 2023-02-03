@@ -1,0 +1,23 @@
+services:
+ web:
+  image: tutum/apache-php
+  hostname: gaspardHost
+  volumes:
+   - ./php:/var/www/html/
+  ports:
+   - 8001:80
+  networks:
+   - frontend
+   - backend
+ db:
+  image: mariadb
+  hostname: db
+  volumes:
+   - ./my-db:/var/lib/mysql
+  environment:
+   - MARIADB_ROOT_PASSWORD=root
+  networks:
+   - backend
+networks:
+ frontend: 
+ backend:

@@ -7,22 +7,12 @@ node {
           checkout scm
     }
 
- 
-/*
-    stage('Run') {
-          img.withRun("--name run-$BUILD_ID -p 8000:80") { c ->
-       
-          }
-    }*/
-
     stage('Push') {
-    docker.withRegistry('https://index.docker.io/v1/' , 'hub_docker_id') {
-       
+    docker.withRegistry('https://index.docker.io/v1/' , 'hub_docker_id') {   
          sh 'apk update'
          sh  'apk add docker-compose'
-         sh 'docker-compose'
-       echo "test"
-      }
+         sh 'docker-compose up'
+         }
     }
 
 }

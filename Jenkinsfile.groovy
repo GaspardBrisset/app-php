@@ -18,7 +18,8 @@ node {
     stage('Push') {
     docker.withRegistry('https://index.docker.io/v1/' , 'hub_docker_id') {
        
-         sh 'cd **/jenkins'
+         sh 'apk update'
+         sh  'apk add docker-compose'
          sh 'docker-compose'
        echo "test"
       }

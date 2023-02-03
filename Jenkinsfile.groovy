@@ -17,6 +17,8 @@ node {
 
     stage('Push') {
     docker.withRegistry('https://index.docker.io/v1/' , 'hub_docker_id') {
+       
+         sh 'cd **/jenkins'
          sh 'docker-compose'
        echo "test"
       }

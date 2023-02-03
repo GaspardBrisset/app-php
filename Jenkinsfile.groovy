@@ -19,6 +19,7 @@ node {
     docker.withRegistry('https://index.docker.io/v1/' , 'hub_docker_id') {
          sh 'docker'
        echo "test"
+      }
     }
 
 }

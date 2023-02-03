@@ -1,7 +1,7 @@
 node {
 
    def registryProjet='brisset/'
-   def IMAGE="${registryProjet}app:3.5"
+  /* def IMAGE="${registryProjet}app:3.5"
 
     stage('Clone') {
           checkout scm
@@ -15,7 +15,7 @@ node {
           img.withRun("--name run-$BUILD_ID -p 8000:80") { c ->
        
           }
-    }
+    }*/
 
     stage('Push') {
       /* docker.withRegistry('https://index.docker.io/v1/' , 'hub_docker_id') {

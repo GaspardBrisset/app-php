@@ -13,7 +13,7 @@ node {
          sh 'docker-compose up -d'
          sh'docker ps'
 
-         }
-    }
+     }
+    
 
 }
